@@ -68,6 +68,19 @@ header {
   align-self: right;
   background-color: transparent;
 }
+
+.img__logo:hover {
+  animation: logo 5s linear;
+}
+@keyframes logo {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: rotateX(35deg);
+  }
+}
+
 .nav_list {
   list-style: none;
   display: flex;
@@ -82,8 +95,14 @@ header {
 .nav_link:hover,
 .nav_link:focus {
   opacity: 0.65;
+  animation: nav 3s ease-out;
 }
 
+@keyframes nav {
+  100% {
+    transform: translateX(60%);
+  }
+}
 .nav_item {
   margin: 0 0 0 1.5rem;
   text-decoration: none;
@@ -131,6 +150,10 @@ header {
   height: 300px;
   margin: 1rem;
   background-size: cover;
+}
+
+.img_main_left:hover {
+  transform: rotate(50deb);
 }
 
 /*.img_main_left:hover :first-child {
