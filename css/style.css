@@ -266,12 +266,20 @@ p {
   background-color: #de8efa;
 }
 
+.nuestroEquipo {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 50px;
+  background-color: #fff;
+}
 .grid_nosotros-personal {
   display: grid;
   grid-template-columns: 250px 400px;
   grid-template-rows: 100px 100px 250px;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .img_personal img {
@@ -310,6 +318,22 @@ p {
 }
 
 /****CSS--F&Q****/
+
+.Titulo-FyQ {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+.preguntas {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+  border: #480361 solid 3px;
+}
 
 /*****CSS--AYUDA*****/
 .body-ayuda {
