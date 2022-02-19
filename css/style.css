@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,300;0,700;1,400&display=swap");
 
 /*BODY*/
@@ -18,17 +15,24 @@ body {
 
 .container {
   width: 80%;
-  margin: 0 auto; 
+  margin: 0 auto;
   max-width: 1200px;
   /*overflow: hidden;*/
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*HEADER*/
 header {
-background-color: #480361;
-padding: 0.5 0;
-position: sticky;
-top: 0;
-z-index: 1;
+  background-color: #a400db;
+  padding: 0.5 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 /*.container_nav {
@@ -41,54 +45,61 @@ z-index: 1;
   flex-wrap: wrap;
   max-width: 1200px;
   min-height: 20vh;
-  background-color: #a400db;*/
-}
+  background-color: #a400db;
+}*/
 
 /*.row_nav {
   display: flex;
   flex-direction: row;
   justify-content: end
-  align-items: center;*/
-}
+  align-items: center;
+}*/
 
 /*.imagenNav {
   align-self: initial;
   /*align-content: flex-start;
   display: inline;/*
 }
-
-/*.img__logo {
-  width: 20vw;
-  height: 20vh;
+*/
+.img__logo {
+  width: 150px;
+  height: 100px;
   margin: 0;
-  align-self: right;*/
+  align-self: right;
+  background-color: transparent;
 }
 .nav_list {
   list-style: none;
   display: flex;
-  
 }
 
 .nav_link {
-  color: #e8ebe8;
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+.nav_link:hover,
+.nav_link:focus {
+  opacity: 0.65;
+}
+
 .nav_item {
   margin: 0 0 0 1.5rem;
+  text-decoration: none;
+  color: #000;
 }
 
 /*MAIN*/
 
-//*.container_main {
+/*.container_main {
   width: 100vw;
   height: 80vh;
   margin: 0 auto;
   min-height: 80vh;
   max-width: 1200px;
-  background-color: #de8efa;*/
-}
+  background-color: #de8efa;
+}*/
 
 .flex_main {
   display: flex;
@@ -171,45 +182,82 @@ iframe {
 
 /*FOOTER*/
 
-footer {
-  width: 100vw;
-  height: 10vh;
-  margin: 0 auto;
-  /*max-width: 1200px;*/
-  background-color: #00001f;
-  display: flex;
+.col {
+  width: 100%;
+  align-content: center;
+}
+
+.footer {
+  padding-top: 1rem;
+  background-color: #2e1330;
+  text-align: center;
+  align-content: center;
+}
+
+.footer-botton {
+  padding: 1.5rem 0.5rem;
+}
+
+.footer-botton__copyright {
+  text-align: center;
+  color: #de8efa;
+  font-weight: 400;
+}
+
+.footer-botton__copyright a {
+  color: #de8efa;
+  text-decoration: none;
+}
+
+.footer-botton__copyright a:hover {
+  color: aqua;
+  text-decoration: underline;
 }
 
 /**CSS--RECETAS*/
 
 /*RECETAS*/
 
-.container_recetas {
+.titulo-Recetas {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 50px;
+
+  /*.container_recetas {
   background-color: #de8efa;
 }
 
 .flex_recetas-col {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 2rem;*/
 }
 
-.flex_recetas-row {
+.titulos-food {
+  margin: 2rem 1rem 1rem 1.5rem;
+}
+
+/*.flex_recetas-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: space-between;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}*/
+p {
+  text-align: center;
+  margin: 1rem 2rem 1rem 3rem;
 }
-
 .p_recetas {
   align-content: center;
   margin-left: 3 rem;
 }
 
-.video_receta {
-  position: fixed;
+.video_recetas {
+  text-align: center;
+  margin: 2rem 1rem 1rem 3rem;
 }
 
 /***CSS--NOSOTROS***/
@@ -218,11 +266,47 @@ footer {
   background-color: #de8efa;
 }
 
-.flex_nosotros-personal {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+.grid_nosotros-personal {
+  display: grid;
+  grid-template-columns: 250px 400px;
+  grid-template-rows: 100px 100px 250px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.img_personal img {
+  width: 250px;
+  height: 450px;
+  grid-column: 1/2;
+  background-color: red;
+  grid-row: 1/5;
+}
+
+.nombre {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  /*background-color: aliceblue;*/
   text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.profesion {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  /*background-color: aqua;*/
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.personal-info {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  /*background-color: yellow;*/
+  text-align: center;
+  align-self: center;
+  justify-self: center;
 }
 
 /****CSS--F&Q****/
